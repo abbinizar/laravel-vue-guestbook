@@ -12,4 +12,8 @@ class signature extends Model
     public function flag(){
     return $this->update(['flagged_at' => \Carbon\Carbon::now()]);
     }
+    public function getAvatarAttribute()
+    {
+    return sprintf('https://www.gravatar.com/avatar/%s?s=100', md5($this->email));
+    }
 }
