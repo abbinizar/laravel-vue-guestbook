@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class SignatureController extends Controller
 {
-    //
+
     public function index(){
         $signatures = Signature::latest()
         ->ignoreFlagged()
